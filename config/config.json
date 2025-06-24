@@ -1,0 +1,28 @@
+{
+  "input": {
+    "icons_dir": "Data/Adjusted Raw Images",
+    "background_color": [255, 255, 255]
+  },
+  "output": {
+    "dir": "output",
+    "image_size": [1024, 1024],
+    "num_images": 50
+  },
+  "generation": {
+    "objects_per_image": {
+      "min": 15,
+      "max": 25
+    },
+    "allow_overlap": false
+  },
+  "augmentation": {
+    "enabled": true,
+    "scale": {
+      "min": 0.9,
+      "max": 1.1
+    },
+    "rotate_90_degrees": true,
+    "flip_horizontal": true,
+    "flip_vertical": true
+  }
+}
