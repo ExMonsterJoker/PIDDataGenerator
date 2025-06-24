@@ -1,0 +1,144 @@
+{
+  "Data": {
+    "Adjusted Raw Images": {
+      "Instrument": {
+        "DCS Field Aux Accesible": {
+          "aux-accessible-dcs.png": null
+        },
+        "DCS Field Aux Inaccesible": {
+          "auxilliary-inaccessible-dcs.png": null
+        },
+        "DCS Field Mounted": {
+          "field-dcs.png": null
+        },
+        "DCS Field Primary Accesible": {
+          "primary-accessible-dcs.png": null
+        },
+        "DCS Field Primary Inaccesible": {
+          "primary-inaccessible-dcs.png": null
+        },
+        "DI Field Aux Accessible": {
+          "aux-accessible-discrete-instrument.png": null
+        },
+        "DI Field Aux Inaccesible": {
+          "auxilliary-inaccessible-discrete-instrument.png": null
+        },
+        "DI Field Mounted": {
+          "field-discrete-instrument.png": null
+        },
+        "DI Field Primary Accessible": {
+          "field-dcs.png": null
+        },
+        "DI Field Primary Inaccessible": {
+          "primary-inaccessible-discrete-instrument.png": null
+        },
+        "Field Mounted Hardware Interlock": {
+          "field-mounted-hardware-interlock.png": null
+        },
+        "PLC Field Aux Accesible": {
+          "auxilliary-accessible-plc.png": null
+        },
+        "PLC Field Aux Inaccesible": {
+          "auxilliary-inaccessible-plc.png": null
+        },
+        "PLC Field Mounted": {
+          "field-mounted-plc.png": null
+        },
+        "PLC Field Primary Accesible": {
+          "primary-accesible-plc.png": null
+        },
+        "PLC Field Primary Inaccesible": {
+          "primary-inaccessible-plc.png": null
+        }
+      },
+      "Symbol": {
+        "3-way Valve": {
+          "3-way-valve.png": null
+        },
+        "4-way Valve": {
+          "4-way-valve.png": null
+        },
+        "Angle Valve": {
+          "angle-valve.png": null
+        },
+        "Cap": {
+          "cap.png": null
+        },
+        "Check Valve": {
+          "check-valve.png": null
+        },
+        "Closed Spacer": {
+          "blank.png": null
+        },
+        "Closed Spectacle": {
+          "closed-figure-8-blind.png": null
+        },
+        "Concentric Reducer": {
+          "concentric-reducer.png": null,
+          "reducer.png": null
+        },
+        "Cone Strainer": {
+          "cone-strainer.png": null
+        },
+        "Eccentric Reducer": {
+          "eccentric-reducer-1.png": null,
+          "eccentric-reducer.png": null
+        },
+        "Flange": {
+          "Flange 1.png": null,
+          "flange.png": null
+        },
+        "NC Ball Valve": {
+          "ball-valve-nc.png": null
+        },
+        "NC Gate Valve": {
+          "general-valve-nc.png": null
+        },
+        "NC Globe Valve": {
+          "globe-valve-nc.png": null
+        },
+        "NO Ball Valve": {
+          "ball-valve-no.png": null
+        },
+        "NO Gate Valve": {
+          "general-valve-no.png": null
+        },
+        "NO Globe Valve": {
+          "globe-valve-no.png": null
+        },
+        "Open Spacer": {
+          "spacer.png": null
+        },
+        "Open Spectacle": {
+          "open-figure-8-blind.png": null
+        },
+        "Piston Operated valve": {
+          "piston-operated-valve.png": null
+        },
+        "Pneumatic Actuator Valve": {
+          "pneumatic-actuator-valve.png": null
+        },
+        "Pressure and Vacuum Relieve Valve": {
+          "pressure-and-vacuum-relief-valve.png": null
+        },
+        "Pressure Regulator Valve": {
+          "pressure-reducing-regulator.png": null
+        },
+        "Pressure Relief Valve": {
+          "pressure-relief-valve.png": null
+        },
+        "Rotary Valve": {
+          "generic-rotary-valve.png": null
+        },
+        "strainer": {
+          "y-type-strainer.png": null
+        },
+        "Vacuum Relief Valve": {
+          "vacuum-relief-valve.png": null
+        }
+      }
+    }
+  },
+  "folder_tree.json": null,
+  "folder_tree_maker.py": null
+}
