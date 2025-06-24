@@ -5,7 +5,6 @@ A comprehensive tool for generating synthetic P&ID (Piping and Instrumentation D
 ## Features
 
 - 🎯 **YOLO Format**: Automatically generates YOLO-format bounding box annotations
-- 🖼️ **Realistic Synthesis**: Creates realistic P&ID-style images with proper object placement
 - 🔧 **Configurable**: Highly customizable through JSON configuration files
 - 📊 **Data Augmentation**: Built-in augmentation techniques for better model generalization
 - 🎨 **Multiple Backgrounds**: Support for white, grid, and blueprint-style backgrounds
