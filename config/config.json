@@ -4,14 +4,19 @@
     "background_color": [255, 255, 255]
   },
   "output": {
-    "dir": "output",
-    "image_size": [1024, 1024],
+    "dir": "YOLO_Dataset",
+    "image_size": [1048, 1048],
     "num_images": 50
+  },
+  "dataset_splits": {
+    "train": 0.7,
+    "val": 0.2,
+    "test": 0.1
   },
   "generation": {
     "objects_per_image": {
-      "min": 15,
-      "max": 25
+      "min": 20,
+      "max": 30
     },
     "allow_overlap": false
   },
@@ -21,8 +26,18 @@
       "min": 0.9,
       "max": 1.1
     },
-    "rotate_90_degrees": true,
-    "flip_horizontal": true,
-    "flip_vertical": true
+    "rotation": {
+      "enabled": true,
+      "chance": 0.2,
+      "angles": [0, 90, 180, 270]
+    },
+    "flip_horizontal": {
+      "enabled": true,
+      "chance": 0.05
+    },
+    "flip_vertical": {
+      "enabled": true,
+      "chance": 0.05
+    }
   }
 }
