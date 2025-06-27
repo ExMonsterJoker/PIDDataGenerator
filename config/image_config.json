@@ -5,8 +5,8 @@
   },
   "output": {
     "dir": "YOLO_Dataset",
-    "image_size": [1048, 1048],
-    "num_images": 50
+    "image_size": [640, 640],
+    "num_images": 3000
   },
   "dataset_splits": {
     "train": 0.7,

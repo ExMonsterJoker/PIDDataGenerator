@@ -9,7 +9,7 @@ import shutil
 import yaml
 
 
-def load_config(config_path='config/config.json'):
+def load_config(config_path='config/image_config.json'):
     """Loads the configuration file."""
     with open(config_path, 'r') as f:
         return json.load(f)
