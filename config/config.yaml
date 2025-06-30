@@ -1,0 +1,70 @@
+# ======================================================
+# CONFIGURATION FOR TRDG (TextRecognitionDataGenerator)
+# v3.0 - With Ratio and Case Control
+# ======================================================
+
+# --- Generation Settings ---
+count: 100
+language: "en" # 'en', 'fr', 'ja', etc.
+allow_space: true
+
+# NEW: TEXT CASE CONTROL
+# Set the case for generated text. Options: 'upper', 'lower', 'mixed'.
+# 'mixed' is the default and allows both upper and lower case letters.
+text_case: "mixed"
+
+# --- Output Settings ---
+output_dir: "output"
+extension: "jpg"
+name_format: 0 # 0: numeric, 1: label, 2: random chars
+
+# --- Font & Text Rendering ---
+font_dir: "fonts"
+# To use a SINGLE specific font, specify its name here (e.g., "arial.ttf").
+# This will override the random selection from font_dir.
+font_file: "arialnarrow.ttf"
+character_spacing: 0
+
+# --- Image Settings ---
+image_size:
+  # For a fixed height, use a single value (e.g., height: 32).
+  # For a RANDOM height in a range, use a list [min, max] and set random_height to true.
+  height: 32 # or [32, 48]
+  width: -1 # -1 for random width
+# Set to true to enable random height from the range specified above.
+random_height: false
+
+margins: { top: 3, left: 3, bottom: 3, right: 3 }
+background_type: 1 # 0: gaussian, 1: plain, 2: quasicrystal, 3: image
+text_color: "" # Hex code like "#282828" or empty for random.
+
+# --- Augmentation & Effects ---
+skewing_angle: 0
+random_skew: true
+blur: 0
+random_blur: true
+distorsion_type: 0 # 0: None, 1: Sine, 2: Cosine, 3: Random
+output_mask: false
+
+# =========================
+# ADVANCED TEXT SOURCES
+# =========================
+
+# --- Feature: Text Template Engine ---
+text_format_template: "4xCHAR-3xNUM-4xSYM_2xCHAR" # "4xCHAR-3xNUM", "ID-8xNUM"
+custom_char_set: "_-,."
+
+# --- Feature: Dictionary Files ---
+source_file_path: "data/dictionaries/words.txt"
+priority_word_file: "data/dictionaries/priority_words.txt"
+# A value of 0.7 means ~70% of generated words will be from the priority file.
+priority_ratio: 0.0
+
+# NEW: TEMPLATE/FILE MIXING RATIO
+# Define the ratio of words to generate from the template vs. from a file.
+# A value of 0.8 means ~80% of words will come from 'text_format_template'
+# and 20% will come from 'source_file_path'.
+# Set to 0.0 to disable and use only the file/priority logic.
+# Set to 1.0 to use only the template. This setting is only active when
+# BOTH 'text_format_template' AND 'source_file_path' are defined.
+template_word_ratio: 0.8

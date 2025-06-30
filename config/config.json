@@ -1,0 +1,9 @@
+   {
+       "character_space": 4,
+       "template": "4xCharacter-4xNumber-4xCharacter-Random",
+       "additional_symbols": [",", "_", "-"],
+       "text_height_range": [20, 50],
+       "font_path": "fonts/arialnarrow.ttf",
+       "word_priority_file": "priority_words.txt",
+       "output_summary_file": "summary.txt"
+   }
