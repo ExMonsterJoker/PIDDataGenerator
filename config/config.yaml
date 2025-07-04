@@ -4,9 +4,19 @@
 # ======================================================
 
 # --- Generation Settings ---
-count: 100
+count: 10000
 language: "en" # 'en', 'fr', 'ja', etc.
 allow_space: true
+
+# --- Data Splitting Settings ---
+enable_data_split: true
+split_ratios:
+  train: 0.8
+  valid: 0.2
+  test: 0  # Optional, set to 0 to disable
+
+# --- Image Format Settings ---
+image_format: "jpg"  # png, jpg, jpeg, webp, etc.
 
 # NEW: TEXT CASE CONTROL
 # Set the case for generated text. Options: 'upper', 'lower', 'mixed'.
@@ -14,7 +24,7 @@ allow_space: true
 text_case: "mixed"
 
 # --- Output Settings ---
-output_dir: "output"
+output_dir: "recognition_dataset"
 extension: "jpg"
 name_format: 0 # 0: numeric, 1: label, 2: random chars
 
@@ -23,16 +33,16 @@ font_dir: "fonts"
 # To use a SINGLE specific font, specify its name here (e.g., "arial.ttf").
 # This will override the random selection from font_dir.
 font_file: "arialnarrow.ttf"
-character_spacing: 0
+character_spacing: 1
 
 # --- Image Settings ---
 image_size:
   # For a fixed height, use a single value (e.g., height: 32).
   # For a RANDOM height in a range, use a list [min, max] and set random_height to true.
-  height: 32 # or [32, 48]
+  height: [32, 96] # or [32, 48]
   width: -1 # -1 for random width
 # Set to true to enable random height from the range specified above.
-random_height: false
+random_height: true
 
 margins: { top: 3, left: 3, bottom: 3, right: 3 }
 background_type: 1 # 0: gaussian, 1: plain, 2: quasicrystal, 3: image
@@ -51,8 +61,11 @@ output_mask: false
 # =========================
 
 # --- Feature: Text Template Engine ---
-text_format_template: "4xCHAR-3xNUM-4xSYM_2xCHAR" # "4xCHAR-3xNUM", "ID-8xNUM"
-custom_char_set: "_-,."
+# Define a template for generated text.
+# Tokens: NUM, CHAR, SYM, and now FRAC (for fractions like ½, ¾, etc.)
+# Example: "ID-4xNUM-1xFRAC" will produce something like "ID-1234-½"
+text_format_template: "4xCHAR-3xNUM1xFRAC_2xNUM\"-4xSYM_5xCHAR" # "4xCHAR-3xNUM", "ID-8xNUM", "4xSYM"
+custom_char_set: "_-,.\""
 
 # --- Feature: Dictionary Files ---
 source_file_path: "data/dictionaries/words.txt"
@@ -67,4 +80,4 @@ priority_ratio: 0.0
 # Set to 0.0 to disable and use only the file/priority logic.
 # Set to 1.0 to use only the template. This setting is only active when
 # BOTH 'text_format_template' AND 'source_file_path' are defined.
-template_word_ratio: 0.8
+template_word_ratio: 0.7
